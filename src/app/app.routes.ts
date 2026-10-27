@@ -23,6 +23,17 @@ export const routes: Routes = [
         canActivate: [authGuard],
         children: [
             {
+                path: '',
+                redirectTo: 'Dashboard',
+                pathMatch: 'full'
+            },
+            {
+                path:'dashboard',
+                loadComponent: () => import('./pages/candidato/dashboard/dashboard').then(
+                    m=> m.Dashboard
+                )
+            },
+            {
                 path:'curriculo',
                 loadComponent: () => import('./pages/candidato/curriculo/curriculo').then( 
                     m => m.Curriculo

@@ -1,1 +1,60 @@
-<p>cursos works!</p>
+<h2>Gerenciar cursos</h2>
+
+<section>
+  <h3>Cadastrar curso</h3>
+
+  <form [formGroup]="cursoForm" (ngSubmit)="cadastrarCurso()">
+    <label for="nome">Nome do curso</label>
+    <input id="nome" formControlName="nome" />
+
+    <label for="descricao">Descrição</label>
+    <textarea id="descricao" formControlName="descricao"></textarea>
+
+    <label for="categoria">Categoria</label>
+    <input id="categoria" formControlName="categoria" />
+
+    <label for="conhecimentos">Conhecimentos (separados por vírgula)</label>
+    <input id="conhecimentos" formControlName="conhecimentos" />
+
+    <button type="submit">Cadastrar curso</button>
+  </form>
+</section>
+
+<hr />
+
+<section>
+  <h3>Recomendar curso ao candidato</h3>
+
+  <form
+    [formGroup]="recomendacaoForm"
+    (ngSubmit)="recomendarCurso()"
+  >
+    <label for="candidato">Candidato</label>
+    <select id="candidato" formControlName="candidatoId">
+      <option [ngValue]="null">Selecione um candidato</option>
+      <option
+        *ngFor="let candidato of candidatos"
+        [ngValue]="candidato.id"
+      >
+        {{ candidato.nome }} — {{ candidato.email }}
+      </option>
+    </select>
+
+    <label for="curso">Curso</label>
+    <select id="curso" formControlName="cursoId">
+      <option [ngValue]="null">Selecione um curso</option>
+      <option *ngFor="let curso of cursos" [ngValue]="curso.id">
+        {{ curso.nome }}
+      </option>
+    </select>
+
+    <label for="motivo">Motivo da recomendação</label>
+    <textarea
+      id="motivo"
+      formControlName="motivo"
+      placeholder="Explique por que o candidato precisa deste curso"
+    ></textarea>
+
+    <button type="submit">Recomendar curso</button>
+  </form>
+</section>

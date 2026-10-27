@@ -61,5 +61,10 @@ export class CursoService {
     return this.cursos;
 
   }
-
+  cadastrar(curso: Omit< Curso,'id'>): void{
+    this.cursos.push({
+      id: Date.now(),
+      ...curso
+    });
+  }
 }

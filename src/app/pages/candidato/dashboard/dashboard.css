@@ -1,0 +1,100 @@
+
+.pagina-dashboard {
+  min-height: 100vh;
+  padding: 36px;
+  box-sizing: border-box;
+  background: #f1f5f9;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+  margin-bottom: 28px;
+}
+
+.cabecalho h1 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 30px;
+}
+
+.cabecalho p {
+  margin: 0;
+  color: #64748b;
+}
+
+.boas-vindas {
+  padding: 30px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  background: #312e81;
+  color: white;
+}
+
+.boas-vindas h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.boas-vindas p {
+  margin-bottom: 0;
+  line-height: 1.6;
+  color: #e0e7ff;
+}
+
+.grade-opcoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: white;
+  color: #0f172a;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+}
+
+.icone {
+  margin-bottom: 14px;
+  font-size: 32px;
+}
+
+.cartao h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.cartao p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.acao {
+  margin-top: auto;
+  padding-top: 14px;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 850px) {
+  .grade-opcoes {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-dashboard {
+    padding: 20px;
+  }
+}

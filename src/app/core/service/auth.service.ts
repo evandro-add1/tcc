@@ -67,6 +67,13 @@ export class AuthService {
     return this.usuarioAtual?.tipo ?? null;
   }
 
+  //rh consegui ver os usuario do sistema
+  listarCandidatos(): Usuario[] {
+  return this.usuarios.filter(
+    usuario => usuario.tipo === 'CANDIDATO'
+  );
+  }
+
   //Encerra a sessão.
   logout(): void {
     this.usuarioAtual = null;

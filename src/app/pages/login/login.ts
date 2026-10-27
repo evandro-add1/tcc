@@ -56,7 +56,7 @@ export class Login {
     //redirecionar
     if(tipo === 'CANDIDATO') {
       this.router.navigate([
-        '/candidato/vagas'
+        '/candidato/dashboard'
       ])
     }
     else if (tipo === 'RH') {
