@@ -1,0 +1,58 @@
+<div class="pagina">
+    <h1>Vagas disponíveis</h1>
+    <p>Encontre oportunidade compatíveis com seu curriculo.</p>
+
+<div class="vagas">
+    @for (vaga of vagas; track vaga.id){
+        <div class="vaga-card">
+            <h2>{{vaga.titulo}}</h2>
+            <p>
+                <strong>Empresa:</strong>
+                {{vaga.empresa}}
+            </p>
+            <p>{{vaga.descricao}}</p>
+            <h3>Requisitos</h3>
+            <ul>
+                @for (requisito of vaga.requisitos; track requisito){
+                    <li>{{requisito}}</li>
+                }
+            </ul>
+            <button (click)="analisarVaga(vaga)">
+                Ver compartibilidade
+            </button>
+        </div>
+    }
+</div>
+<!--Resultado Analise-->
+@if (resultado){
+    <div class="resultado">
+        <h2>Resultado da análise</h2>
+        <h3>Compatibilidade:{{resultado.compatibilidade}}%</h3>
+        <h3>Conhecimentos encontrados</h3>
+
+        <ul>
+            @for(item of resultado.possui; track item){
+                <li>ok {{item}}</li>
+            }
+        </ul>
+        <h3>Conhecimentos faltantes</h3>
+
+        <ul>
+            @for(item of resultado.faltando; track item){
+                <li>x {{item}}</li>
+            }
+        </ul>
+        <h3> Cursos recomendados</h3>
+        @if(resultado.cursosRecomendados.length > 0){
+            @for(curso of resultado.cursosRecomendados; track curso.id){
+                <div class="curso">
+                    <strong>{{curso.nome}}</strong>
+                    <p>{{curso.descricao}}</p>
+                </div>
+            }
+        }@else{
+            <p>Nenhum curso necessario no momento.</p>
+        }
+    </div>
+}
+</div>

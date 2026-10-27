@@ -1,0 +1,26 @@
+<form [formGroup]="curriculoForm" (ngSubmit)="salvar()">
+  <label for="conhecimentos">Conhecimentos</label>
+  <input
+    id="conhecimentos"
+    type="text"
+    formControlName="conhecimentos"
+    placeholder="Angular, TypeScript, HTML, CSS"
+  >
+
+  <label for="experiencia">Experiência</label>
+  <textarea
+    id="experiencia"
+    formControlName="experiencia"
+    placeholder="Descreva sua experiência"
+  ></textarea>
+
+  <label for="formacao">Formação</label>
+  <input
+    id="formacao"
+    type="text"
+    formControlName="formacao"
+    placeholder="Técnico em Desenvolvimento"
+  >
+
+  <button type="submit">Salvar currículo</button>
+</form>
