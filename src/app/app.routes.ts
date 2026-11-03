@@ -76,6 +76,12 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/rh/categorias/categorias').then(
                     m => m.Categorias
                 )
+            },
+            {
+                path: 'candidatos',
+                loadComponent: () => import('./pages/rh/candidatos/candidatos').then(
+                    m => m.Candidatos
+                )
             }
         ]
     },

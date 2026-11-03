@@ -1,0 +1,71 @@
+/* Página principal */
+.pagina {
+  padding: 30px;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.pagina h1 {
+  color: #24344d;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Menu de opções */
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Cartões clicáveis */
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  min-height: 120px;
+
+  background-color: #ffffff;
+  color: #24344d;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 12px;
+  border: 1px solid #ddd;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.menu a:hover {
+  background-color: #243f70;
+  color: white;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Clique */
+.menu a:active {
+  transform: scale(0.97);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,56 @@
+<div class="pagina">
+
+  <h1>Candidatos cadastrados</h1>
+
+  <div class="lista-candidatos">
+
+    <div class="card-candidato" *ngFor="let candidato of candidatos">
+
+      <h3>{{ candidato.nome }}</h3>
+
+      <p>
+        <strong>E-mail:</strong>
+        {{ candidato.email }}
+      </p>
+
+      <button (click)="visualizarCurriculo(candidato)">
+        Visualizar currículo
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Visualização do currículo -->
+
+  <div class="curriculo" *ngIf="candidatoSelecionado">
+
+    <h2>Currículo de {{ candidatoSelecionado.nome }}</h2>
+
+    <div *ngIf="candidatoSelecionado.curriculo; else semCurriculo">
+
+      <h3>Conhecimentos</h3>
+
+      <ul>
+        <li *ngFor="let conhecimento of candidatoSelecionado.curriculo.conhecimentos">
+          {{ conhecimento }}
+        </li>
+      </ul>
+
+      <h3>Experiência</h3>
+      <p>{{ candidatoSelecionado.curriculo.experiencia }}</p>
+
+      <h3>Formação</h3>
+      <p>{{ candidatoSelecionado.curriculo.formacao }}</p>
+
+    </div>
+
+    <ng-template #semCurriculo>
+      <p>Este candidato ainda não cadastrou um currículo.</p>
+    </ng-template>
+
+    <button (click)="fecharCurriculo()">Fechar currículo</button>
+
+  </div>
+
+</div>
