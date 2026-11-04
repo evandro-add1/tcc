@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, effect } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ThemeService } from './core/theme/theme.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   imports: [RouterOutlet],
@@ -8,5 +10,25 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('sistema-vagas');
+  private readonly themeService = inject(ThemeService);
+  private readonly document = inject(DOCUMENT);
+
+  constructor() {
+    // Mantém a inicialização que você já tinha
+    this.themeService.theme();
+
+    // Cria um efeito que roda automaticamente toda vez que o sinal "theme" muda
+    effect(() => {
+      // Usamos a propriedade que você mesmo criou no serviço
+      const caminhoFavicon = this.themeService.faviconOnLight(); 
+      this.atualizarFavicon(caminhoFavicon);
+    });
+  }
+
+  private atualizarFavicon(caminho: string) {
+    const favicon = this.document.getElementById('app-favicon') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = caminho;
+    }
+  }
 }

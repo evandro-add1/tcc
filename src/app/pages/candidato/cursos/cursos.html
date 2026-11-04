@@ -1,1 +1,20 @@
-<p>cursos works!</p>
+<section class="pagina">
+  <h1>Cursos</h1>
+  <p class="page-lead">Trilhas disponíveis para desenvolver os conhecimentos do currículo.</p>
+
+  <div class="stage-brand">
+    <div class="lift">
+      <section class="panel-cursos">
+        <h2>Cursos realizados</h2>
+        <div class="tag-list">
+          @for (curso of cursos; track curso.id) {
+            <article class="tag">
+              <strong>{{ curso.nome }}</strong>
+              <span>{{ curso.categoria }}</span>
+            </article>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

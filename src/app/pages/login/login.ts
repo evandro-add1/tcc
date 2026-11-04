@@ -6,6 +6,7 @@ import{
 } from '@angular/forms';
 import {Router} from '@angular/router';
 import {AuthService} from '../../core/service/auth.service';
+import { ThemeService } from '../../core/theme/theme.service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ import {AuthService} from '../../core/service/auth.service';
   templateUrl: './login.html',
 })
 export class Login {
+  readonly theme = inject(ThemeService);
   //injeta formBuilder
   private formBuilder = inject(FormBuilder);
   private authService = inject(AuthService);

@@ -1,0 +1,25 @@
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" [routerLink]="home">
+      <img [src]="theme.logoOnLight()" alt="talento" />
+    </a>
+
+    <nav class="topbar-links" aria-label="Navegação principal">
+      @for (link of links; track link.path) {
+        <a [routerLink]="link.path" routerLinkActive="is-active">{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="topbar-actions">
+      <span class="topbar-user">{{ usuario?.nome }}</span>
+      <button type="button" class="btn btn-on-dark" (click)="theme.toggle()">
+        {{ theme.theme() === 'roxo' ? 'Versão azul' : 'Versão roxa' }}
+      </button>
+      <button type="button" class="btn btn-on-dark" (click)="sair()">Sair</button>
+    </div>
+  </header>
+
+  <main class="shell-main">
+    <router-outlet />
+  </main>
+</div>

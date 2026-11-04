@@ -1,53 +1,7 @@
-/*um css simples para eu conseguir ver o comportamento*/
 .pagina {
-  padding: 30px;
-  min-height: 100vh;
-  background: #f4f6f9;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  color: #24344d;
-  margin-bottom: 25px;
+  background: transparent;
 }
 
 .lista-candidatos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card-candidato,
-.curriculo {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-}
-
-.card-candidato h3 {
-  color: #243f70;
-}
-
-button {
-  background: #243f70;
-  color: white;
-  border: none;
-  padding: 11px 16px;
-  border-radius: 7px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background: #365b96;
-}
-
-.curriculo {
-  margin-top: 30px;
-}
-
-.curriculo h2 {
-  color: #243f70;
+  margin-top: 8px;
 }

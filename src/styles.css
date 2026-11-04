@@ -1,1 +1,1319 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* =========================================================
+   TALENTO — DESIGN SYSTEM GLOBAL
+   Temas: Roxo (padrão) e Azul
+   Angular | Gilroy | Bordas geométricas
+   ========================================================= */
+
+
+/* =========================================================
+   1. TIPOGRAFIA LOCAL — GILROY
+   Arquivos disponíveis em public/fonts/
+   ========================================================= */
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =========================================================
+   2. TEMA PADRÃO — ROXO TALENTO
+   ========================================================= */
+
+:root,
+.tema-roxo {
+  color-scheme: light;
+
+  /* Identidade visual */
+  --cor-primaria: #33016B;
+  --cor-intermediaria: #651FB3;
+  --cor-clara: #E0D8F8;
+  --cor-destaque: #96EE7A;
+  --cor-fundo: #F7F7F7;
+
+  /* Superfícies e textos */
+  --cor-branca: #FFFFFF;
+  --cor-texto: #33016B;
+  --cor-texto-secundario: #687084;
+  --cor-borda: #33016B;
+  --cor-sucesso: #96EE7A;
+  --cor-erro: #D62828;
+  --cor-aviso: #F4C542;
+
+  /* Efeitos geométricos */
+  --sombra-3d: 8px 8px 0px #33016B;
+  --sombra-3d-menor: 5px 5px 0px #33016B;
+
+  /* Geometria */
+  --raio-borda-reto: 0px !important;
+  --tamanho-chanfro: 28px;
+
+  /* Tipografia */
+  --familia-fonte: 'Gilroy', sans-serif;
+  --peso-fino: 400;
+  --peso-medio: 500;
+  --peso-semi: 600;
+  --peso-negrito: 700;
+  --peso-extra-negrito: 900;
+
+  /* Tamanhos */
+  --fonte-xs: 12px;
+  --fonte-sm: 14px;
+  --fonte-md: 16px;
+  --fonte-lg: 22px;
+  --fonte-xl: 36px;
+
+  /* Espaçamentos */
+  --espaco-xs: 8px;
+  --espaco-sm: 12px;
+  --espaco-md: 16px;
+  --espaco-lg: 24px;
+  --espaco-xl: 40px;
+
+  /* Compatibilidade com estilos anteriores */
+  --color-white: var(--cor-branca);
+  --color-strong: var(--cor-destaque);
+  --color-bg: var(--cor-fundo);
+  --color-brand: var(--cor-primaria);
+  --color-primary: var(--cor-intermediaria);
+  --color-soft: var(--cor-clara);
+  --color-accent: var(--cor-destaque);
+  --color-text: var(--cor-texto);
+  --color-on-brand: var(--cor-branca);
+  --shadow-color: var(--cor-primaria);
+  --box-shadow-3d: var(--sombra-3d);
+
+  /* Compatibilidade com o projeto anterior */
+  --talento-primary: var(--cor-primaria);
+  --talento-secondary: var(--cor-intermediaria);
+  --talento-soft: var(--cor-clara);
+  --talento-lime: var(--cor-destaque);
+  --talento-green: var(--cor-destaque);
+  --talento-bg: var(--cor-fundo);
+  --talento-surface: var(--cor-branca);
+  --talento-text: var(--cor-texto);
+  --talento-muted: var(--cor-texto-secundario);
+  --talento-border: var(--cor-borda);
+  --talento-shadow: var(--sombra-3d);
+  --talento-radius: 0px;
+}
+
+
+/* =========================================================
+   3. TEMA ALTERNATIVO — AZUL TALENTO
+   ========================================================= */
+
+.tema-azul {
+  color-scheme: light;
+
+  /* Identidade visual */
+  --cor-primaria: #000C46;
+  --cor-intermediaria: #004B96;
+  --cor-clara: #D5E6FF;
+  --cor-destaque: #D3FBBB;
+  --cor-fundo: #F7F7F7;
+
+  /* Superfícies e textos */
+  --cor-branca: #FFFFFF;
+  --cor-texto: #000C46;
+  --cor-texto-secundario: #687084;
+  --cor-borda: #000C46;
+  --cor-sucesso: #D3FBBB;
+  --cor-erro: #D62828;
+  --cor-aviso: #F4C542;
+
+  /* Efeitos geométricos */
+  --sombra-3d: 8px 8px 0px #000C46;
+  --sombra-3d-menor: 5px 5px 0px #000C46;
+
+  /* Compatibilidade com estilos anteriores */
+  --color-white: var(--cor-branca);
+  --color-strong: var(--cor-destaque);
+  --color-bg: var(--cor-fundo);
+  --color-brand: var(--cor-primaria);
+  --color-primary: var(--cor-intermediaria);
+  --color-soft: var(--cor-clara);
+  --color-accent: var(--cor-destaque);
+  --color-text: var(--cor-texto);
+  --color-on-brand: var(--cor-branca);
+  --shadow-color: var(--cor-primaria);
+  --box-shadow-3d: var(--sombra-3d);
+
+  /* Compatibilidade com o projeto anterior */
+  --talento-primary: var(--cor-primaria);
+  --talento-secondary: var(--cor-intermediaria);
+  --talento-soft: var(--cor-clara);
+  --talento-lime: var(--cor-destaque);
+  --talento-green: var(--cor-destaque);
+  --talento-bg: var(--cor-fundo);
+  --talento-surface: var(--cor-branca);
+  --talento-text: var(--cor-texto);
+  --talento-muted: var(--cor-texto-secundario);
+  --talento-border: var(--cor-borda);
+  --talento-shadow: var(--sombra-3d);
+  --talento-radius: 0px;
+}
+
+
+/* Compatibilidade com os nomes antigos dos temas */
+.theme-roxo {
+  --cor-primaria: #33016B;
+  --cor-intermediaria: #651FB3;
+  --cor-clara: #E0D8F8;
+  --cor-destaque: #96EE7A;
+  --cor-fundo: #F7F7F7;
+  --sombra-3d: 8px 8px 0px #33016B;
+}
+
+.theme-azul {
+  --cor-primaria: #000C46;
+  --cor-intermediaria: #004B96;
+  --cor-clara: #D5E6FF;
+  --cor-destaque: #D3FBBB;
+  --cor-fundo: #F7F7F7;
+  --sombra-3d: 8px 8px 0px #000C46;
+}
+
+
+/* =========================================================
+   4. RESET GLOBAL — BORDAS RETAS
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: var(--cor-fundo);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--familia-fonte);
+  font-size: var(--fonte-md);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+  font-family: inherit;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   5. HIERARQUIA TIPOGRÁFICA
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: var(--cor-primaria);
+  font-family: var(--familia-fonte);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+h2 {
+  font-size: clamp(24px, 3vw, 30px);
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 var(--espaco-md);
+}
+
+a {
+  color: var(--cor-intermediaria);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--cor-primaria);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+small {
+  color: var(--cor-texto-secundario);
+  font-size: var(--fonte-xs);
+}
+
+
+/* =========================================================
+   6. BOTÃO TALENTO
+   Inversão de cores ao pressionar
+   ========================================================= */
+
+button,
+.btn,
+.botao-talento {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 46px;
+  margin: 0;
+  padding: 14px 22px;
+
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+
+  font-size: var(--fonte-sm);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  box-shadow: 6px 6px 0px var(--cor-primaria);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.16s ease,
+    color 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+button:hover:not(:disabled),
+.btn:hover:not(:disabled),
+.botao-talento:hover:not(:disabled) {
+  background: var(--cor-intermediaria);
+  border-color: var(--cor-intermediaria);
+  color: var(--cor-branca);
+}
+
+button:active:not(:disabled),
+.btn:active:not(:disabled),
+.botao-talento:active:not(:disabled) {
+  background: var(--cor-destaque);
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+
+  box-shadow: 0 0 0 var(--cor-primaria);
+  transform: translate(6px, 6px);
+}
+
+button:disabled,
+.btn:disabled,
+.botao-talento:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Botão secundário */
+
+.botao-talento--secundario {
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+/* Botão contornado */
+
+.botao-talento--contorno {
+  background: transparent;
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+.botao-talento--contorno:hover:not(:disabled) {
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+}
+
+/* Botão sobre fundos escuros */
+
+.botao-talento--claro {
+  background: transparent;
+  color: var(--cor-branca);
+  border-color: var(--cor-branca);
+  box-shadow: 5px 5px 0 var(--cor-intermediaria);
+}
+
+.botao-talento--claro:hover:not(:disabled) {
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  border-color: var(--cor-branca);
+}
+
+
+/* =========================================================
+   7. CARDS E SOMBRAS 3D
+   ========================================================= */
+
+.card-talento,
+.surface-card,
+.vaga-card,
+.card-candidato,
+.resultado,
+.curso,
+.curriculo {
+  padding: 22px;
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-branca);
+  color: var(--cor-texto);
+  box-shadow: var(--sombra-3d);
+}
+
+.card-talento h2,
+.card-talento h3,
+.surface-card h3,
+.vaga-card h2,
+.card-candidato h3,
+.resultado h2,
+.curriculo h2 {
+  color: var(--cor-primaria);
+}
+
+.card-talento--destaque {
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+}
+
+.card-talento--destaque h2,
+.card-talento--destaque h3,
+.card-talento--destaque p {
+  color: var(--cor-branca);
+}
+
+.card-talento--claro {
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+}
+
+/* Sombra sólida reutilizável */
+
+.sombra-talento {
+  box-shadow: var(--sombra-3d);
+}
+
+.sombra-talento-menor {
+  box-shadow: var(--sombra-3d-menor);
+}
+
+
+/* =========================================================
+   8. CARD CHANFRADO
+   Cortes diagonais geométricos
+   ========================================================= */
+
+/*
+  Padrão: corte no canto superior esquerdo
+  e no canto inferior direito.
+*/
+
+.card-chanfrado {
+  --corte: var(--tamanho-chanfro);
+
+  clip-path: polygon(
+    var(--corte) 0,
+    100% 0,
+    100% calc(100% - var(--corte)),
+    calc(100% - var(--corte)) 100%,
+    0 100%,
+    0 var(--corte)
+  );
+
+  filter: drop-shadow(var(--sombra-3d));
+}
+
+/* Corte somente no canto superior esquerdo */
+
+.card-chanfrado--superior-esquerdo {
+  clip-path: polygon(
+    var(--corte, 28px) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--corte, 28px)
+  );
+}
+
+/* Corte somente no canto inferior direito */
+
+.card-chanfrado--inferior-direito {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--corte, 28px)),
+    calc(100% - var(--corte, 28px)) 100%,
+    0 100%
+  );
+}
+
+/* Corte nos dois cantos do lado direito */
+
+.card-chanfrado--direita {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--corte, 28px)) 0,
+    100% var(--corte, 28px),
+    100% calc(100% - var(--corte, 28px)),
+    calc(100% - var(--corte, 28px)) 100%,
+    0 100%
+  );
+}
+
+.card-corte-superior-direito {
+  
+  clip-path: polygon(
+    0 0,
+    calc(100% - 24px) 0,
+    100% 24px,
+    100% 100%,
+    0 100%
+  );
+
+}
+
+.card-chanfrado-inferior-esquerdo {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    24px 100%,
+    0 calc(100% - 24px)
+  );
+}
+
+
+/* =========================================================
+   9. PAINÉIS E BLOCOS INSTITUCIONAIS
+   ========================================================= */
+
+.stage-brand {
+  padding: var(--espaco-xl);
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+}
+
+.stage-brand h1,
+.stage-brand h2,
+.stage-brand h3,
+.stage-brand p {
+  color: var(--cor-branca);
+}
+
+.panel-cursos,
+.chamfer-panel,
+.card-cursos {
+  padding: 28px 32px 32px;
+  background: var(--cor-intermediaria);
+  color: var(--cor-branca);
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - 28px) 0,
+    100% 28px,
+    100% 100%,
+    28px 100%,
+    0 calc(100% - 28px)
+  );
+}
+
+.panel-cursos h2,
+.panel-cursos h3,
+.panel-cursos p {
+  color: var(--cor-branca);
+}
+
+
+/* =========================================================
+   10. FORMULÁRIOS E CAMPOS DE ENTRADA
+   ========================================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+
+  font-size: var(--fonte-md);
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--cor-texto-secundario);
+  opacity: 0.8;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--cor-intermediaria);
+  box-shadow: 4px 4px 0 var(--cor-intermediaria);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--cor-primaria);
+  font-size: var(--fonte-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--espaco-sm);
+  max-width: 680px;
+}
+
+form button {
+  align-self: flex-start;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 18px;
+  min-height: 18px;
+  accent-color: var(--cor-primaria);
+  box-shadow: none;
+}
+
+input[type="file"] {
+  padding: 8px;
+}
+
+
+/* =========================================================
+   11. ELEMENTOS DE INTERFACE
+   ========================================================= */
+
+hr {
+  margin: 32px 0;
+  border: 0;
+  border-top: 2px solid var(--cor-primaria);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 140px;
+  padding: 10px 14px;
+
+  border: 2px solid var(--cor-primaria);
+  background: transparent;
+  color: var(--cor-primaria);
+
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tag span {
+  font-size: var(--fonte-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.page-lead {
+  max-width: 62ch;
+  margin-bottom: var(--espaco-lg);
+}
+
+.pagina,
+.pagina-dashboard {
+  color: var(--cor-texto);
+}
+
+.surface-grid,
+.vagas,
+.lista-candidatos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.resultado,
+.curriculo {
+  margin-top: 28px;
+}
+
+
+/* =========================================================
+   12. LOGIN — IDENTIDADE TALENTO
+   ========================================================= */
+
+.login-page,
+.login-container {
+  min-height: 100vh;
+  padding: 32px 24px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--cor-fundo);
+  font-family: var(--familia-fonte);
+}
+
+.login-frame {
+  position: relative;
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.9fr)
+    minmax(280px, 1.1fr);
+
+  width: 100%;
+  max-width: 980px;
+  margin: 24px auto;
+
+}
+
+/*.login-frame::beforee {
+  content: '';
+  position: absolute;
+  z-index: 0;
+
+  left: 16px;
+  top: 28px;
+  bottom: -22px;
+  width: 46%;
+
+  background: var(--cor-destaque);
+}
+
+.login-frame::afteer {
+  content: '';
+  position: absolute;
+  z-index: 0;
+
+  right: -16px;
+  top: 34px;
+  bottom: -22px;
+  width: 58%;
+
+  background: var(--cor-destaque);
+}*/
+
+.login-card,
+.login-aside {
+  position: relative;
+  z-index: 1;
+
+  padding: 42px 36px;
+  color: var(--cor-branca);
+}
+
+.login-card {
+  background: var(--cor-primaria);
+}
+
+.login-aside {
+  background: var(--cor-intermediaria);
+}
+
+.login-card h1,
+.login-card h2,
+.login-aside h2,
+.login-card p,
+.login-aside p {
+  color: var(--cor-branca);
+}
+
+.login-card img {
+  display: block;
+  width: auto;
+  height: 36px;
+  margin-bottom: 28px;
+}
+
+.login-card form {
+  max-width: none;
+}
+
+.login-card label {
+  color: var(--cor-branca);
+}
+
+.login-card input,
+.login-card textarea,
+.login-card select {
+  background: transparent;
+  border-color: var(--cor-branca);
+  color: var(--cor-branca);
+}
+
+.login-card input::placeholder {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.login-card button {
+  margin-top: 8px;
+  background: transparent;
+  color: var(--cor-branca);
+  border-color: var(--cor-branca);
+  box-shadow: none;
+}
+
+.login-card button:hover:not(:disabled) {
+  background: var(--cor-intermediaria);
+  color: var(--cor-branca);
+}
+
+.login-card button:active:not(:disabled) {
+  background: var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+.login-card small {
+  color: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   13. IDENTIDADE DA MARCA
+   ========================================================= */
+
+.marca-talento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--cor-primaria);
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.marca-simbolo {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+
+  font-size: 1.45rem;
+  font-weight: 900;
+
+  box-shadow: 5px 5px 0 var(--cor-destaque);
+}
+
+.marca-o {
+  position: relative;
+}
+
+.marca-o::after {
+  content: '';
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  right: -3px;
+  top: 1px;
+
+  background: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   14. DASHBOARD E NAVEGAÇÃO
+   ========================================================= */
+
+.pagina-dashboard,
+.pagina,
+.pagina-conteudo {
+  min-height: 100vh;
+  padding: clamp(22px, 4vw, 54px);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--familia-fonte);
+}
+
+.cabecalho,
+.cabecalho-pagina {
+  margin-bottom: 28px;
+}
+
+.cabecalho p,
+.cabecalho-pagina p {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.03rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: var(--cor-intermediaria);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.boas-vindas {
+  position: relative;
+  overflow: hidden;
+
+  padding: clamp(26px, 4vw, 42px);
+  margin-bottom: 28px;
+
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+
+  box-shadow: var(--sombra-3d);
+}
+
+.boas-vindas::after {
+  content: '↗';
+  position: absolute;
+
+  right: 30px;
+  bottom: -45px;
+
+  color: var(--cor-destaque);
+  opacity: 0.95;
+
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.boas-vindas h2 {
+  position: relative;
+  z-index: 1;
+
+  max-width: 640px;
+  margin-bottom: 12px;
+
+  color: var(--cor-branca);
+}
+
+.boas-vindas p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 580px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.grade-opcoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.cartao {
+  min-height: 230px;
+  padding: 25px;
+
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-branca);
+  color: var(--cor-texto);
+
+  box-shadow: var(--sombra-3d);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.cartao:hover {
+  transform: translate(-2px, -2px);
+}
+
+.cartao h3 {
+  margin-bottom: 10px;
+  color: var(--cor-primaria);
+  font-size: 1.18rem;
+}
+
+.icone {
+  display: grid;
+  place-items: center;
+
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+
+  font-size: 25px;
+}
+
+.acao {
+  margin-top: auto;
+  padding-top: 12px;
+
+  color: var(--cor-intermediaria);
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   15. VAGAS, CURSOS E CANDIDATOS
+   ========================================================= */
+
+.vagas {
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  margin-top: 24px;
+}
+
+.vaga-card {
+  padding: 24px;
+}
+
+.vaga-card h2,
+.pagina article h4 {
+  margin-top: 0;
+}
+
+.vaga-card h3 {
+  margin-top: 22px;
+}
+
+.vaga-card li {
+  margin: 5px 0;
+  color: var(--cor-texto-secundario);
+}
+
+.vaga-card button {
+  margin: 8px 8px 0 0;
+}
+
+.resultado {
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.curso {
+  padding: 16px;
+  margin: 10px 0;
+}
+
+.pagina-conteudo section,
+.pagina > section {
+  padding: 24px;
+  margin: 18px 0;
+}
+
+.pagina form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 5px;
+  max-width: 780px;
+}
+
+.pagina form button {
+  justify-self: start;
+  margin-top: 12px;
+}
+
+.pagina section form {
+  max-width: 100%;
+}
+
+.pagina .menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.menu a,
+.pagina > a {
+  display: block;
+  padding: 22px;
+
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+
+  font-weight: 700;
+  box-shadow: var(--sombra-3d-menor);
+}
+
+.menu a:hover,
+.pagina > a:hover {
+  background: var(--cor-clara);
+}
+
+
+/* =========================================================
+   16. ESTADOS VAZIOS E TABELAS
+   ========================================================= */
+
+.estado-vazio {
+  padding: 44px 24px;
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-branca);
+  text-align: center;
+  box-shadow: var(--sombra-3d);
+}
+
+.estado-vazio h2 {
+  margin: 12px 0;
+}
+
+.estado-vazio p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.estado-icone {
+  display: inline-grid;
+  place-items: center;
+
+  width: 56px;
+  height: 56px;
+
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+
+  font-size: 1.8rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--cor-branca);
+}
+
+th {
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+  text-align: left;
+  font-weight: 700;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--cor-primaria);
+}
+
+
+/* =========================================================
+   17. ACESSIBILIDADE E FOCO
+   ========================================================= */
+
+button:focus-visible,
+.btn:focus-visible,
+.botao-talento:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+[role="status"] {
+  padding: 12px 14px;
+  border: 2px solid var(--cor-intermediaria);
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+}
+
+
+/* =========================================================
+   18. RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .grade-opcoes {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-dashboard,
+  .pagina,
+  .pagina-conteudo {
+    padding: 20px;
+  }
+
+  .boas-vindas::after {
+    right: -12px;
+    font-size: 130px;
+    opacity: 0.55;
+  }
+
+  .login-frame {
+    grid-template-columns: 1fr;
+  }
+
+  .login-frame::before,
+  .login-frame::after {
+    display: none;
+  }
+
+  .login-card,
+  .login-aside {
+    box-shadow: var(--sombra-3d);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .login-page,
+  .login-container {
+    padding: 18px;
+  }
+
+  .login-card,
+  .login-aside {
+    padding: 28px 22px;
+  }
+
+  .panel-cursos {
+    padding: 24px 20px;
+  }
+
+  .surface-grid,
+  .vagas,
+  .lista-candidatos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   19. MOVIMENTO REDUZIDO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
