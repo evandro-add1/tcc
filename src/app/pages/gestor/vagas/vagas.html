@@ -1,4 +1,90 @@
-<section class="pagina">
-  <h1>Vagas</h1>
-  <p class="page-lead">A gestão de vagas da empresa aparece neste painel.</p>
-</section>
+<div class="pagina">
+
+  <h1>Gerenciamento de vagas</h1>
+
+  <section class="formulario">
+
+    <h2>
+      {{ vagaEditando !== null ? 'Editar vaga' : 'Cadastrar nova vaga' }}
+    </h2>
+
+    <form [formGroup]="vagaForm" (ngSubmit)="salvarVaga()">
+
+      <label for="titulo">Título da vaga</label>
+      <input id="titulo" formControlName="titulo"
+        placeholder="Ex.: Desenvolvedor Angular">
+
+      <label for="empresa">Empresa</label>
+      <input id="empresa" formControlName="empresa"
+        placeholder="Nome da empresa">
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" formControlName="descricao"
+        placeholder="Descreva as atividades da vaga"></textarea>
+
+      <label for="requisitos">Requisitos</label>
+      <input id="requisitos" formControlName="requisitos"
+        placeholder="Angular, TypeScript, HTML, CSS">
+
+      <div class="botoes">
+        <button type="submit">
+          {{ vagaEditando !== null ? 'Salvar alterações' : 'Cadastrar vaga' }}
+        </button>
+
+        <button type="button" class="secundario"
+          *ngIf="vagaEditando !== null"
+          (click)="limparFormulario()">
+          Cancelar edição
+        </button>
+      </div>
+
+    </form>
+
+  </section>
+
+  <section class="lista">
+
+    <h2>Vagas cadastradas</h2>
+
+    <p *ngIf="vagas.length === 0">
+      Você ainda não cadastrou nenhuma vaga.
+    </p>
+
+    <div class="card-vaga" *ngFor="let vaga of vagas">
+
+      <div class="cabecalho-vaga">
+        <h3>{{ vaga.titulo }}</h3>
+
+        <span [class.encerrada]="!vaga.ativa">
+          {{ vaga.ativa ? 'Ativa' : 'Encerrada' }}
+        </span>
+      </div>
+
+      <p><strong>Empresa:</strong> {{ vaga.empresa }}</p>
+
+      <p>{{ vaga.descricao }}</p>
+
+      <p><strong>Requisitos:</strong></p>
+
+      <ul>
+        <li *ngFor="let requisito of vaga.requisitos">
+          {{ requisito }}
+        </li>
+      </ul>
+
+      <div class="botoes">
+        <button type="button" (click)="editarVaga(vaga)">
+          Editar
+        </button>
+
+        <button type="button" class="secundario"
+          (click)="alterarStatus(vaga)">
+          {{ vaga.ativa ? 'Encerrar vaga' : 'Reabrir vaga' }}
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
