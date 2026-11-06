@@ -24,7 +24,7 @@ export class VagaService {
         'HTML',
         'CSS'
       ],
-      gestorId: 1,
+      gestorId: 3,
       ativa: true
     },
 
@@ -40,7 +40,7 @@ export class VagaService {
         'SQL',
         'Git'
       ],
-      gestorId: 1,
+      gestorId: 3,
       ativa: true
     }
 
@@ -56,4 +56,34 @@ export class VagaService {
     return this.vagas.find(vaga => vaga.id === id);
   }
 
+  //procurar vaga pelo id de quem mandou
+  listarPorGestor(gestorId: number): Vaga[]{
+    return this.vagas.filter(
+      vaga => vaga.gestorId === gestorId
+    );
+  }
+
+  //cadastrar vagas
+  cadastrar(vaga: Omit<Vaga,'id'>): void{
+    this.vagas.push({
+      id: Date.now(),
+      ...vaga
+    });
+  }
+  //atualizar vagas
+  atualizar(vagaAtualizada: Vaga): void {
+    const indice = this.vagas.findIndex(
+      vaga => vaga.id === vagaAtualizada.id
+    );
+    if (indice !== 1){
+      this.vagas[indice] = vagaAtualizada;
+    }
+  }
+  //ativar ou encerrar vagas
+  alterarStatus(id: number,ativa:boolean): void{
+    const vaga = this.buscarPorId(id);
+    if(vaga){
+      vaga.ativa = ativa;
+    }
+  }
 }

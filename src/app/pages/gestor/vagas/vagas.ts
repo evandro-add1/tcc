@@ -81,9 +81,5 @@ export class VagasComponent {
       );
 
   }
-  //analise para gestor
-  listar(): Vaga[]{
-    return this.vagas;
-  }
 
 }
