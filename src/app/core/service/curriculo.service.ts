@@ -23,6 +23,20 @@ export class CurriculoService {
         'Desenvolvimento de aplicações web.',
       formacao:
         'Técnico em Desenvolvimento de Sistemas'
+    },
+    {
+      id: 2,
+      usuarioId: 2,
+      conhecimentos: [
+        'Logistica',
+        'Administração',
+        'SQL',
+        'CSS'
+      ],
+      experiencia:
+        'Desenvolvimento de aplicações web.',
+      formacao:
+        'Técnico em Adninistração'
     }
 
   ];

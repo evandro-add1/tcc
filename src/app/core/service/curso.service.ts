@@ -52,6 +52,17 @@ export class CursoService {
         'Git'
       ]
 
+    },
+    {
+      id: 5,
+      nome: 'ADM',
+      descricao:
+        'Desenvolver sua habilidade para liderar e organizar pessoas.',
+      categoria: 'Habilidade',
+      conhecimentos: [
+        'ADM'
+      ]
+
     }
 
   ];

@@ -5,7 +5,16 @@ import { RecomendacaoCurso } from "../../models/recomendacao-curso.model";
     providedIn: 'root'
 })
 export class RecomendacaoCursoService {
-    private recomendacoes: RecomendacaoCurso[] = [];
+    private recomendacoes: RecomendacaoCurso[] = [
+        
+    {
+      id: 1,
+      cursoId: 5,
+      candidatoId: 1,
+      motivo: 'Aprimorar seus conhecimentos em Angular e desenvolvimento de aplicações web.',
+      data: '09/11/2026'
+    }
+    ];
 
     //registrar uma recomendação do rh
     recomendar(

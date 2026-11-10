@@ -21,6 +21,12 @@ export class AuthService {
       email: 'candidato@email.com',
       tipo: 'CANDIDATO'
     },
+    {
+      id: 2,
+      nome: 'Candidato-2',
+      email: 'candidato2@email.com',
+      tipo: 'CANDIDATO'
+    },
 
     {
       id: 2,
@@ -33,6 +39,12 @@ export class AuthService {
       id: 3,
       nome: 'Gestor',
       email: 'gestor@email.com',
+      tipo: 'GESTOR'
+    },
+    {
+      id: 2,
+      nome: 'Gestor-2',
+      email: 'gestor2@email.com',
       tipo: 'GESTOR'
     }
   ];

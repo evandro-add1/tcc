@@ -42,6 +42,21 @@ export class VagaService {
       ],
       gestorId: 3,
       ativa: true
+    },
+    {
+      id: 2,
+      titulo: 'Desenvolvedor C#',
+      empresa: 'Empresa Y',
+      descricao:
+        'Desenvolvimento de APIs utilizando C# e .NET.',
+      requisitos: [
+        'C#',
+        '.NET',
+        'SQL',
+        'Git'
+      ],
+      gestorId: 2,
+      ativa: true
     }
 
   ];
